@@ -1,6 +1,6 @@
 # Welcome to the Clean Architecture and TDD Course Repository
 
-Welcome to the repository for my YouTube course on **Clean Architecture and Test-Driven Development (TDD)**! I'm excited to have you here. You can find the complete playlist for the course [here]([https://www.google.com](https://www.youtube.com/playlist?list=PLNILV9KUmm-nyrCU3Vws1uNZ_oGMYJyA1)).
+Welcome to the repository for my YouTube course on **Clean Architecture and Test-Driven Development (TDD)**! I'm excited to have you here. You can find the complete playlist for the course [here](https://www.youtube.com/playlist?list=PLNILV9KUmm-nyrCU3Vws1uNZ_oGMYJyA1).
 
 
 ## Repository Structure
