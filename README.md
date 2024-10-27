@@ -18,4 +18,4 @@ Happy coding!
 
 ## Connect with Me
 - **[Upwork](https://www.upwork.com/freelancers/~01561e287f26e76ae3)**
-- **[LinkedIn](www.linkedin.com/in/ibrahimelmourchidi)**
+- **[LinkedIn](https://www.linkedin.com/in/ibrahimelmourchidi)**
