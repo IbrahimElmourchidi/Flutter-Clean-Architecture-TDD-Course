@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="001 Domain Layer Implementation Order" id="73eVRGgkzPtaNfy0_uKv">
+    <mxGraphModel dx="1509" dy="2049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-1" value="&lt;p style=&quot;padding: 0px; margin: 12px 0px 0px; word-break: break-word; line-height: var(--cib-type-body2-line-height); font-variation-settings: var(--cib-type-body2-font-variation-settings);&quot;&gt;&lt;font face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;The domain layer contains the business logic of the application. It is independent of any external frameworks or libraries. This layer includes:&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-1000" width="720" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-2" value="Entities" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=16;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-880" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-3" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;&quot; face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot; color=&quot;#111111&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Core objects of the application, representing business models.&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;&quot; face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot; color=&quot;#111111&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;What is the shape of the data needed by the app to work properly.&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="_EYArDWVUP4Ef9tgCb6S-2">
+          <mxGeometry y="50" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-4" value=" Use Cases" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=16;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-320" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-5" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot; color=&quot;#111111&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Specific actions or operations that can be performed, encapsulating the business rules.&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="_EYArDWVUP4Ef9tgCb6S-4">
+          <mxGeometry y="50" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=3;" edge="1" parent="1" source="_EYArDWVUP4Ef9tgCb6S-6" target="_EYArDWVUP4Ef9tgCb6S-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-6" value="Repositories (Interfaces)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=16;fontStyle=1;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-600" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-7" value="&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot; color=&quot;#111111&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&amp;nbsp;Abstract definitions of data operations, which are implemented in the data layer&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="_EYArDWVUP4Ef9tgCb6S-6">
+          <mxGeometry y="50" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-8" value="&lt;p style=&quot;padding: 0px; margin: 12px 0px 0px; word-break: break-word; line-height: var(--cib-type-body2-line-height); font-variation-settings: var(--cib-type-body2-font-variation-settings);&quot;&gt;&lt;font size=&quot;1&quot; color=&quot;#ff3333&quot; face=&quot;-apple-system, Roboto, SegoeUI, Segoe UI, Helvetica Neue, Helvetica, Microsoft YaHei, Meiryo UI, Meiryo, Arial Unicode MS, sans-serif&quot;&gt;&lt;b style=&quot;font-size: 30px;&quot;&gt;Domain Layer&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-1080" width="760" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_EYArDWVUP4Ef9tgCb6S-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=3;" edge="1" parent="1" source="_EYArDWVUP4Ef9tgCb6S-3" target="_EYArDWVUP4Ef9tgCb6S-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
