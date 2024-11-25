@@ -8,7 +8,7 @@ class CreateTask implements UseCaseWithParams<void, CreateTaskParams> {
 
   @override
   FutureResult<void> call(CreateTaskParams params) async {
-    await _repo.createTask(
+    return await _repo.createTask(
       title: params.title,
       tag: params.tag,
       createdAt: params.createdAt,
