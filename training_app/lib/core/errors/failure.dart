@@ -1,4 +1,6 @@
-abstract class Failure {
+import 'package:equatable/equatable.dart';
+
+abstract class Failure extends Equatable {
   Failure({
     required this.messsage,
     required this.statusCode,
@@ -8,6 +10,9 @@ abstract class Failure {
   final int statusCode;
 
   String get errorMessage => '$statusCode: $messsage';
+
+  @override
+  List<Object?> get props => [messsage, statusCode];
 }
 
 class APIFailuer extends Failure {

@@ -28,6 +28,9 @@ class TaskRemoteDataSource implements TaskDataSource {
             "createdAt": createdAtString,
           },
         ),
+        headers: {
+          "content-type": "application/json",
+        },
       );
       if (!_isRequestSuccess(response.statusCode)) {
         throw APIException(

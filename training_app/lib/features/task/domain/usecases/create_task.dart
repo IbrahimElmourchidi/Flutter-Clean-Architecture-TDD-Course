@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:training_app/core/usecases/usecase.dart';
 import 'package:training_app/core/utils/typedef.dart';
 import 'package:training_app/features/task/domain/repos/task_repo.dart';
@@ -16,7 +17,7 @@ class CreateTask implements UseCaseWithParams<void, CreateTaskParams> {
   }
 }
 
-class CreateTaskParams {
+class CreateTaskParams extends Equatable {
   CreateTaskParams({
     required this.title,
     required this.tag,
@@ -25,4 +26,7 @@ class CreateTaskParams {
   final String title;
   final String tag;
   final DateTime createdAt;
+
+  @override
+  List<Object?> get props => [title, tag, createdAt];
 }

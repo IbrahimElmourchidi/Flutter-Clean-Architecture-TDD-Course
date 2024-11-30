@@ -29,7 +29,7 @@ class TaskModel extends TaskEntity {
     return <String, dynamic>{
       'title': title,
       'tag': tag,
-      'createdAt': createdAt.millisecondsSinceEpoch,
+      'createdAt': createdAt.toIso8601String(),
       'id': id,
     };
   }
@@ -39,7 +39,7 @@ class TaskModel extends TaskEntity {
       title: map['title'] as String,
       tag: map['tag'] as String,
       createdAt: DateTime.parse(map['createdAt'] as String),
-      id: map['id'] as int,
+      id: int.parse(map['id'] as String),
     );
   }
 

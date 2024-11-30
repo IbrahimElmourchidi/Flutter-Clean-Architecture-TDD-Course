@@ -1,7 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-class TaskEntity {
+import 'package:equatable/equatable.dart';
+
+class TaskEntity extends Equatable {
   TaskEntity({
     required this.title,
     required this.tag,
@@ -13,4 +15,7 @@ class TaskEntity {
   final String tag;
   final DateTime createdAt;
   final int id;
+
+  @override
+  List<Object?> get props => [id, title, tag, createdAt];
 }
