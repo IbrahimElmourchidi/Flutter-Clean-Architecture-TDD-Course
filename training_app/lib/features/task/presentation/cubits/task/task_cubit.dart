@@ -32,7 +32,7 @@ class TaskCubit extends Cubit<TaskState> {
       ),
     );
     result.fold((failure) {
-      emit(TasksError(failure.errorMessage));
+      emit(TasksError(failure.messsage));
     }, (data) {
       emit(const TaskCreated());
     });
@@ -42,7 +42,7 @@ class TaskCubit extends Cubit<TaskState> {
     emit(const GettingTasks());
     final result = await _getAllTasks();
     result.fold((failure) {
-      emit(TasksError(failure.errorMessage));
+      emit(TasksError(failure.messsage));
     }, (data) {
       emit(TasksLoaded(data));
     });

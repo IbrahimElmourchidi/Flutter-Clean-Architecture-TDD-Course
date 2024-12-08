@@ -27,6 +27,14 @@ class CreateTaskParams extends Equatable {
   final String tag;
   final DateTime createdAt;
 
+  factory CreateTaskParams.empty() {
+    return CreateTaskParams(
+      title: 'title',
+      tag: 'tag',
+      createdAt: DateTime(2024, 12, 3),
+    );
+  }
+
   @override
   List<Object?> get props => [title, tag, createdAt];
 }

@@ -18,16 +18,18 @@ class TaskRemoteDataSource implements TaskDataSource {
     required DateTime createdAt,
   }) async {
     final String createdAtString = createdAt.toIso8601String();
+    final body = jsonEncode(
+      {
+        "tag": tag,
+        "title": title,
+        "createdAt": createdAtString,
+      },
+    );
+
     try {
       final response = await _client.post(
         Uri.parse('$kBaseUrl/tasks'),
-        body: jsonEncode(
-          {
-            "tag": tag,
-            "title": title,
-            "createdAt": createdAtString,
-          },
-        ),
+        body: body,
         headers: {
           "content-type": "application/json",
         },
@@ -48,15 +50,15 @@ class TaskRemoteDataSource implements TaskDataSource {
   Future<List<TaskModel>> getAllTasks() async {
     try {
       final response = await _client.get(Uri.parse('$kBaseUrl/tasks'));
-      final responseBody = response.body;
-      final responseObjs = jsonDecode(responseBody) as List<dynamic>;
-      final result = responseObjs.map((obj) => TaskModel.fromMap(obj)).toList();
       if (!_isRequestSuccess(response.statusCode)) {
         throw APIException(
           errorMessage: 'Internal Server Error',
           statusCode: response.statusCode,
         );
       }
+      final responseBody = response.body;
+      final responseObjs = jsonDecode(responseBody) as List<dynamic>;
+      final result = responseObjs.map((obj) => TaskModel.fromMap(obj)).toList();
       return result;
     } on APIException catch (e) {
       rethrow;

@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:training_app/core/utils/typedef.dart';
 import 'package:training_app/features/task/domain/entities/task_entity.dart';
 
@@ -30,7 +31,7 @@ class TaskModel extends TaskEntity {
       'title': title,
       'tag': tag,
       'createdAt': createdAt.toIso8601String(),
-      'id': id,
+      'id': id.toString(),
     };
   }
 
